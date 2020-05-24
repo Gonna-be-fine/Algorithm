@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+<script type="text/javascript">
+var s=[2,3,1,5,7,2,6];
+var index;
+for(let i=0; i<s.length-1; i++){
+	index = i;
+	for(let j=i+1; j<s.length; j++){
+		if(s[index]>s[j]){
+			console.log("y");
+			index =j;
+		}
+	}
+		if(index!=i){
+			var temp = s[i];
+			s[i]=s[index];
+			s[index]=temp;
+		}
+}
+console.log(s);
+
+
+
+
+function selsetSort(arr){
+	var len = arr.length;
+	var index;
+	for(var i=0;i<len-1;i++){
+		index=i;
+		for(var j=i+1;j<len;j++){
+			if(arr[index]>arr[j]){//寻找最小值
+				index=j;//保存最小值的索引
+			}
+		}
+		if(index!=i){
+		var temp =arr[i];
+		arr[i]=arr[index];
+		arr[index]=temp;
+	}
+	}
+	return arr;
+}
+// console.log(selsetSort(s));
+</script>
+</body>
+</html>
